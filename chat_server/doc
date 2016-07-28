@@ -1,0 +1,51 @@
+message status:
+    0: not send
+    1: send
+
+user status:
+    0: off-line
+    1: on-line
+
+message type:
+    00: message count               *
+    01: register                    *
+        nickname-password
+    02: register result
+        0: register fail
+        1id: register success
+    03: login                       *
+        password
+    04: login result
+        0: login fail
+        1: login success
+    05: friend's status changed
+        status
+    06: find friends
+        id-nickname
+    07: find friends result
+        id-nickname...
+    08: friend application
+        nickname
+    09: friend application result
+        0-nickname: disagree
+        1-nickname: agree
+    10: set remark
+        remark
+    11: send friend list
+        id-remark-nickname-status...
+    12: set user info
+        nickname-sex-birthday
+    13: friend's nickname changed
+        nickname
+    14: request user info
+        id
+    15: return user info
+        id-nickname-sex-birthday
+    16: send chat message
+        message
+    17: message send success
+        time
+    18: request friend nickname and status
+        id
+    19: return user nickname and status
+        id-nickname-status
